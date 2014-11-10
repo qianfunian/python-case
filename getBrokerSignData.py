@@ -66,7 +66,3 @@ end = int(time.time())
 val = end - start
 timeFile.write(str(val))
 timeFile.close()
-
-
-
-

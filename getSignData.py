@@ -8,7 +8,7 @@ timeFile = open('time.log', 'a+')
 start = int(time.time())
 
 
-mobileDbConnection = MySQLdb.connect(user="readonly_v2", passwd="aNjuKe9dx1Pdw", host='10.10.8.128', db="mobile_db")
+mobileDbConnection = MySQLdb.connect(user="anjuke_triger", passwd="anjuke_triger", host='10.20.3.80', db="mobile_db")
 mobileCursor = mobileDbConnection.cursor()
 
 globalBrokerIds = {}
@@ -30,7 +30,7 @@ def generate_data(brokerIds):
         mobileCursor.execute(sql)
         sign_data = mobileCursor.fetchall()
 
-        anjukeDbConnection = MySQLdb.connect(user="readonly_v2", passwd="aNjuKe9dx1Pdw", host='10.10.8.80',
+        anjukeDbConnection = MySQLdb.connect(user="anjuke_triger", passwd="anjuke_triger", host='10.20.3.80',
                                              db="anjuke_db")
 
         sql = 'select ajk_brokerextend.BrokerId,ajk_brokerextend.TrueName,ajk_brokerextend.UserMobile,' \
